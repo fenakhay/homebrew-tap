@@ -2,29 +2,26 @@ class Kwikibot < Formula
   desc "Command-line tool for talking to a MediaWiki wiki"
   homepage "https://github.com/fenakhay/kwikibot"
   license "MIT"
-  version "1.0.1"
+  version "1.0.2"
 
   on_macos do
     on_arm do
-      url "https://github.com/fenakhay/kwikibot/releases/download/v1.0.1/kwikibot-1.0.1-macos-arm64.tgz"
-      sha256 "ce1fcfabca488666227987857a5465b73987dade581a0d0cb13ebf9705746bb0"
+      url "https://github.com/fenakhay/kwikibot/releases/download/v1.0.2/kwikibot-1.0.2-macos-arm64.tgz"
+      sha256 "47e0b473e37c406150e4af3c938d68e03695438e1d695e68a9132ab3e7421fce"
     end
     on_intel do
-      url "https://github.com/fenakhay/kwikibot/releases/download/v1.0.1/kwikibot-1.0.1-macos-x64.tgz"
-      sha256 "16c55941caf3f0afcea325a42d9f326942a502ad5d2bd477f2637f354c996412"
+      url "https://github.com/fenakhay/kwikibot/releases/download/v1.0.2/kwikibot-1.0.2-macos-x64.tgz"
+      sha256 "4967ee75721e255021b49c65bfc4aeae7b5479bcc8e92f254d37c71863f55859"
     end
   end
 
   on_linux do
-    url "https://github.com/fenakhay/kwikibot/releases/download/v1.0.1/kwikibot-1.0.1-linux-x64.tgz"
-    sha256 "1c77a2b08bebbca407c850c891ae1430b49c3b395c40dc4306977b10823df4bc"
+    url "https://github.com/fenakhay/kwikibot/releases/download/v1.0.2/kwikibot-1.0.2-linux-x64.tgz"
+    sha256 "2d2a7b732f9f28783f9ad27e444589bef6317203b84cac782f00a616670b7a71"
   end
 
   def install
-    libexec.install Dir["*"]
-    launcher = Dir[libexec/"**/kwikibot"].find { |path| File.file?(path) && File.executable?(path) }
-    odie "no kwikibot launcher in the archive" if launcher.nil?
-    bin.write_exec_script launcher
+    bin.install "kwikibot"
   end
 
   test do
