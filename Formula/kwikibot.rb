@@ -2,22 +2,22 @@ class Kwikibot < Formula
   desc "Command-line tool for talking to a MediaWiki wiki"
   homepage "https://github.com/fenakhay/kwikibot"
   license "MIT"
-  version "1.1.1"
+  version "1.2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/fenakhay/kwikibot/releases/download/v1.1.1/kwikibot-1.1.1-macos-arm64.tgz"
-      sha256 "b756e4a6a5e77c1f376639f4be64ac541c3b4e1af03d2a9f84f19c2043eacb9e"
+      url "https://github.com/fenakhay/kwikibot/releases/download/v1.2.0/kwikibot-1.2.0-macos-arm64.tgz"
+      sha256 "b8f871cf2d8cc7c1d33ecd965d104e54b0fa6372f1d421d7aa75979aa88f0921"
     end
     on_intel do
-      url "https://github.com/fenakhay/kwikibot/releases/download/v1.1.1/kwikibot-1.1.1-macos-x64.tgz"
-      sha256 "6cc58565517820567103273740dafbd99af733724b29f2cb7c2e2877be8c70af"
+      url "https://github.com/fenakhay/kwikibot/releases/download/v1.2.0/kwikibot-1.2.0-macos-x64.tgz"
+      sha256 "bb16d18aca59dd4e5249bcba369720a55d5de7f31f3533a29b3de67e3f8e77fc"
     end
   end
 
   on_linux do
-    url "https://github.com/fenakhay/kwikibot/releases/download/v1.1.1/kwikibot-1.1.1-linux-x64.tgz"
-    sha256 "56761d5678fac4ae413c9bf98aaf9599f70c07a5bdf3ed20c4da6b197b2a9212"
+    url "https://github.com/fenakhay/kwikibot/releases/download/v1.2.0/kwikibot-1.2.0-linux-x64.tgz"
+    sha256 "43e5ad7b90e88dd0231ddaf7bce717409fce45a1af30438b1957773af1f6c0b9"
   end
 
   def install
